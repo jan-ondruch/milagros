@@ -1,6 +1,10 @@
+/*
+RE-READ the best practises & your ReactJS pdf notes for better composition and program structure.
+*/
+
 import React, { Component } from 'react';
 import './App.css';
-import Feed from './Feed.js';
+import InstaApi from './InstaApi.js';
 
 class App extends Component {
   render() {
@@ -9,7 +13,7 @@ class App extends Component {
         <div className="App-header">
           <h2>Milagros</h2>
         </div>
-        <Feed />
+        <InstaApi />
       </div>
     );
   }
