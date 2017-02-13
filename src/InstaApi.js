@@ -27,7 +27,7 @@ export default class InstaApi extends Component {
  		 * is asynchronous.
  		 */
 		window.instaFeed = (result) => {
-			this.setState({data: result});
+			this.setState({data: result.data});
 		}
 
 		// JSONP is a trick to overcome XMLHttpRequest same domain policy.
@@ -42,12 +42,25 @@ export default class InstaApi extends Component {
 
 	/**
    * render() method should always only render and minimize the logic inside
+   * We use here conditional rendering, because we have to wait for data to
+   * pass on to the Parser component. state is the control element here.
+   * If we didn't do it, then we need to check in the Parser component for
+   * object emptiness / if it's undefined, we would however need to do it in
+   * all child components.
 	 */
   render() {
-    return (
-      <div>
-      	<Parser data={this.state.data} />
-      </div>
-    );
+  	// Check if object is empty
+  	if (!Object.keys(this.state.data).length) {
+  		return (
+  			<p>Loading data...</p>
+  		);
+  	} 
+  	else {
+  		return (
+      	<div>
+      		<Parser data={this.state.data} />
+      	</div>
+    	);
+  	} 
   }
 }
