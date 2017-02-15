@@ -12,6 +12,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <h2>Milagros</h2>
+          <h5>Instagram API, ReactJS and Heroku.</h5>
         </div>
         <InstaApi />
       </div>

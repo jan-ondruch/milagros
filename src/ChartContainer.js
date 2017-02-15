@@ -31,7 +31,7 @@ export default class ChartContainer extends React.Component {
 
   findMaxValue(filterData) {
     let maxValue = filterData.reduce((max, curr) => {
-      curr[1] > max ? max = curr[1] : max = max;
+      curr[1] > max ? max = curr[1] : null;
       return max;
     }, 0);
     if (maxValue <= 5) maxValue++;

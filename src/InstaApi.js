@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import ChartContainer from './ChartContainer';
+import Menu from './Menu';
 
 
-let MENUITEMS = ["filter", "likes", "comments"];
+let MENUITEMS_CHART = ["filter", "likes", "comments"];
+let MENUITEMS_IMAGES = ["images", "videos"];
 
 /**
  * 
@@ -62,62 +63,18 @@ export default class InstaApi extends Component {
   	else {
   		return (
       	<div>
-      		<MenuTable name="Chart menu" 
-      							 data={this.state.data}
-      							 menuItems={MENUITEMS}
+      		<Menu title="1. Charts"
+      				  subtitle="Choose one of the Instagram information to track!" 
+      					data={this.state.data}
+      					menuItems={MENUITEMS_CHART}
+      		/>
+      		<Menu title="2. Images"
+      					subtitle="Have a look at some pictures!"
+      					data={this.state.data}
+      					menuItems={MENUITEMS_IMAGES}
       		/>
       	</div>
     	);
   	} 
   }
-}
-
-/**
- * Encapsulates the whole table.
- */
-class MenuTable extends Component {
-	render() {
-		return (
-			<div>
-				<MenuHeader name={this.props.name} />
-				<MenuBody menuItems={this.props.menuItems} data={this.props.data} />
-			</div>
-		);
-	}
-}
-
-/**
- * Sets header name for the menu.
- */
-let MenuHeader = (props) => (
-	<h2>{props.name}</h2>
-)
-
-/**
- * 
- */
-class MenuBody extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {value: this.props.menuItems[0]};	// chosen item to draw chart
-		this.handleClick = this.handleClick.bind(this);
-	}
-
-	handleClick(e) {
-		this.setState({value: e.target.value})
-	}
-
-	// Separate container component from presentional component (render those buttons in another component)
-	render() {
-		return (
-			<div value={this.state.value} onClick={this.handleClick}>
-				<button value={this.props.menuItems[0]}>{this.props.menuItems[0]}</button>
-				<button value={this.props.menuItems[1]}>{this.props.menuItems[1]}</button>
-				<button value={this.props.menuItems[2]}>{this.props.menuItems[2]}</button>
-				<ChartContainer data={this.props.data} 
-												name={this.state.value}
-				/>
-			</div>
-		)
-	}
 }
