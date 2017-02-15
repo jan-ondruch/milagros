@@ -1,14 +1,18 @@
 import React from 'react'
 import {Chart} from 'react-google-charts'
- 
+
+
+/**
+ * Container (logic) for bar chart.
+ */
 export default class ChartContainer extends React.Component {
   constructor(props){
     super(props);
-    this.addData = this.addData.bind(this);
+    this.getData = this.getData.bind(this);
     this.findMaxValue = this.findMaxValue.bind(this);
   }
 
-  addData() {
+  getData() {
     let filterData;
     if (this.props.name === 'filter') {
       filterData = Array.from(new Map([...new Set(this.props.data)].map(
@@ -29,17 +33,21 @@ export default class ChartContainer extends React.Component {
     return filterData
   }
 
+  /**
+   * Find maximal value in the filtered data to set max value for the x-axis of the chart.
+   */
   findMaxValue(filterData) {
     let maxValue = filterData.reduce((max, curr) => {
       curr[1] > max ? max = curr[1] : null;
       return max;
     }, 0);
+    // for values <= 5, the chart draws 0.5 steps on the x-axis
     if (maxValue <= 5) maxValue++;
     return maxValue;
   }
 
   render() {
-    let filterData = this.addData();
+    let filterData = this.getData();
     let maxValue = this.findMaxValue(filterData);
     let options = {
       title: this.props.name,

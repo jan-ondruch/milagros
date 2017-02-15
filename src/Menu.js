@@ -65,7 +65,9 @@ class MenuBody extends Component {
 			return (
 			<div value={this.state.value} onClick={this.handleClick}>
 				{rows}
-				<ImageContainer data={this.props.data} />
+				<ImageContainer data={this.props.data} 
+												name={this.state.value}
+				/>
 			</div>
 		)
 		}	
