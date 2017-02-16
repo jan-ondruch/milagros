@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ChartContainer from './ChartContainer';
-import ImageContainer from './ImageContainer';
+import ImagesContainer from './ImagesContainer';
 
 
 /**
@@ -65,7 +65,7 @@ class MenuBody extends Component {
 			return (
 			<div value={this.state.value} onClick={this.handleClick}>
 				{rows}
-				<ImageContainer data={this.props.data} 
+				<ImagesContainer data={this.props.data} 
 												name={this.state.value}
 				/>
 			</div>

@@ -3,7 +3,7 @@ import Menu from './Menu';
 
 
 let MENUITEMS_CHART = ["filter", "likes", "comments"];
-let MENUITEMS_IMAGES = ["images", "videos"];
+let MENUITEMS_POSTS = ["images", "videos"];
 
 /**
  * 
@@ -68,10 +68,10 @@ export default class InstaApi extends Component {
       					data={this.state.data}
       					menuItems={MENUITEMS_CHART}
       		/>
-      		<Menu title="2. Images"
-      					subtitle="Have a look at some pictures!"
+      		<Menu title="2. Posts"
+      					subtitle="Have a look at some posts!"
       					data={this.state.data}
-      					menuItems={MENUITEMS_IMAGES}
+      					menuItems={MENUITEMS_POSTS}
       		/>
       	</div>
     	);
