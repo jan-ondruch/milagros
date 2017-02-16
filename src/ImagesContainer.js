@@ -10,7 +10,10 @@ export default class ImagesContainer extends Component {
 				<div id="postsGrid">
 					{this.props.data.map((x) => (
 				    <ImageTileContainer alt={x.caption.text} 
-				    					 					link={x.images.standard_resolution.url} 
+				    					 					src={x.images.standard_resolution.url}
+				    					 					caption={x.caption.text}
+				    					 					likes={x.likes.count}
+				    					 					tags={x.tags}
 				    					 					key={x.id}
 				    />
 				    // A good rule of thumb is that elements inside the map() call need keys.
@@ -49,37 +52,34 @@ class ImageTileContainer extends Component {
 	}
 
 	mouseOver() {
-		console.log('mouseOver!');
 		this.setState({hover: true});
 	}
 
 	mouseOut() {
-		console.log('mouseOut!');
 		this.setState({hover: false});
 	}
 
 	render() {
-		let linkStyle;
+		// render default image look and image with info onHover
 		if (this.state.hover) {
-			linkStyle={opacity: 0.8}
+			return (
+				<div className="darken" onMouseOver={this.mouseOver} onMouseOut={this.mouseOut}>
+					<img alt={this.props.alt} src={this.props.src}></img>
+					<span>Likes: {this.props.likes}</span>
+					{this.props.tags.map((x) => <li key={x}>{x}</li>)}
+					<p>Lorem Ipsum Dolor Sit Amet.</p>
+				</div>
+			)
 		}
 		else {
-			linkStyle={opacity: 1}
+			return (
+				<div onMouseOver={this.mouseOver} onMouseOut={this.mouseOut}>
+					<img style={{'opacity': 1}} alt={this.props.alt} src={this.props.src}></img>
+				</div>
+			)
 		}
-		return (
-			<div>
-				<img style={linkStyle} alt={this.props.alt} src={this.props.link} onMouseOver={this.mouseOver} onMouseOut={this.mouseOut}></img>
-			</div>
-		)
 	}
 }
-
-/**
- * Renders image element on the screen.
- */
-let imageTile = (props) => (
-	<img alt={this.props.alt} src={this.props.link} onMouseOver={this.mouseOver} onMouseOut={this.mouseOut}></img>
-)
 
 /**
  * Render elements on the screen
