@@ -66,15 +66,21 @@ class ImageTileContainer extends Component {
 				<div className="darken" onMouseOver={this.mouseOver} onMouseOut={this.mouseOut}>
 					<img alt={this.props.alt} src={this.props.src}></img>
 					<span>Likes: {this.props.likes}</span>
-					{this.props.tags.map((x) => <li key={x}>{x}</li>)}
-					<p>Lorem Ipsum Dolor Sit Amet.</p>
+					<div>
+						{this.props.tags.map((x) => <p key={x}>{x}</p>)}
+					</div>
 				</div>
 			)
 		}
 		else {
+			// empty elements must be there for non-glitching onHover
 			return (
-				<div onMouseOver={this.mouseOver} onMouseOut={this.mouseOut}>
-					<img style={{'opacity': 1}} alt={this.props.alt} src={this.props.src}></img>
+				<div className="lighten" onMouseOver={this.mouseOver} onMouseOut={this.mouseOut}>
+					<img alt={this.props.alt} src={this.props.src}></img>
+					<span></span>
+					<div>
+						{this.props.tags.map((x) => <p key={x}></p>)}
+					</div>
 				</div>
 			)
 		}
