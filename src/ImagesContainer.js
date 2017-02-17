@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
 
 
 export default class ImagesContainer extends Component {
@@ -65,7 +64,9 @@ class ImageTileContainer extends Component {
 			return (
 				<div className="darken" onMouseOver={this.mouseOver} onMouseOut={this.mouseOut}>
 					<img alt={this.props.alt} src={this.props.src}></img>
-					<span>Likes: {this.props.likes}</span>
+					<span>
+						{this.props.likes}
+					</span>
 					<div>
 						{this.props.tags.map((x) => <p key={x}>{x}</p>)}
 					</div>

@@ -4,6 +4,7 @@ import Menu from './Menu';
 
 let MENUITEMS_CHART = ["filter", "likes", "comments"];
 let MENUITEMS_POSTS = ["images", "videos"];
+let MENUITEMS_MAP = ["Germany", "Europe"];
 
 /**
  * 
@@ -73,6 +74,11 @@ export default class InstaApi extends Component {
       					data={this.state.data}
       					menuItems={MENUITEMS_POSTS}
       		/>
+          <Menu title="3. Map"
+                subtitle="Check out where I was!"
+                data={this.state.data}
+                menuItems={MENUITEMS_MAP}
+          />
       	</div>
     	);
   	} 

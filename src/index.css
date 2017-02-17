@@ -62,6 +62,7 @@ body {
 	position: relative;
     display: inline-block;
     padding: 0;
+    cursor: default;
 }
 
 .darken img, div {
@@ -80,7 +81,7 @@ body {
 
 .darken span {
 	position: absolute; 
-	top: 25%;
+	top: 33%;
 	font-size: 3em;
 	left: 0; 
 	width: 100%; 

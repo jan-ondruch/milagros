@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ChartContainer from './ChartContainer';
 import ImagesContainer from './ImagesContainer';
+import MapContainer from './MapContainer';
 
 
 /**
@@ -61,15 +62,26 @@ class MenuBody extends Component {
 			)	
 		}
 		// Images
+		else if (this.props.menuItems[0] === 'images') {
+			return (
+				<div value={this.state.value} onClick={this.handleClick}>
+					{rows}
+					<ImagesContainer data={this.props.data} 
+													 name={this.state.value}
+					/>
+				</div>
+			)
+		}
+		// Map
 		else {
 			return (
-			<div value={this.state.value} onClick={this.handleClick}>
-				{rows}
-				<ImagesContainer data={this.props.data} 
+				<div value={this.state.value} onClick={this.handleClick}>
+					{rows}
+					<MapContainer data={this.props.data} 
 												name={this.state.value}
-				/>
-			</div>
-		)
+					/>
+				</div>
+			)
 		}	
 		
 	}

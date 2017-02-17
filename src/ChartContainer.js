@@ -38,8 +38,7 @@ export default class ChartContainer extends React.Component {
    */
   findMaxValue(filterData) {
     let maxValue = filterData.reduce((max, curr) => {
-      curr[1] > max ? max = curr[1] : null;
-      return max;
+      return curr[1] > max ? max = curr[1] : null;
     }, 0);
     // for values <= 5, the chart draws 0.5 steps on the x-axis
     if (maxValue <= 5) maxValue++;
