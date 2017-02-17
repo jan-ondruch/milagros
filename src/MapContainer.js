@@ -13,10 +13,6 @@ export class MapContainer extends Component {
           containerStyle={{}}
           centerAroundCurrentLocation={true}
           >
-          <Marker
-    				name={'Furtwangen center'}
-    				position={{lat: 48.0501440, lng: 8.2014190}} 
-    			/>
 				</Map>
 			</div>
 		)
