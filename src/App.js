@@ -15,6 +15,7 @@ class App extends Component {
           <h5>Instagram API, ReactJS and Heroku.</h5>
         </div>
         <InstaApi />
+        <div style={{'height': 200, backgroundColor: '#3d3d3d', marginTop: '4em'}}></div>
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Highlight from 'react-highlighter';
 
 
 export default class CaptionContainer extends Component {
@@ -61,15 +62,12 @@ class SearchBar extends Component {
 class CaptionsGrid extends React.Component {
   render() {
     var rows = [];
-    let captions = this.props.data.filter((x) => {
-			return x.caption.text;
-		});
     this.props.data.forEach((x) => {
     	// if the searched is not in the caption
       if (x.caption.text.indexOf(this.props.filterText) === -1) {
         return;
       }
-      rows.push(<Caption capiton={x.caption.text} key={x.id} />);
+      rows.push(<Caption search={this.props.filterText} caption={x.caption.text} key={x.id} />);
     });
 
     return (
@@ -84,7 +82,7 @@ class CaptionsGrid extends React.Component {
 let Caption = (props) => (
   <div>
   	<br></br>
-  	<p>{props.capiton}</p>  
+  		<Highlight search={props.search}>{props.caption}</Highlight>
   	<br></br>
   </div>
 )
