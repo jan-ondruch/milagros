@@ -9,10 +9,10 @@ export class MapContainer extends Component {
 				<Map google={this.props.google}
           style={{width: '100%', height: '90%'}}
           className={'map'}
-          zoom={10}
+          zoom={2}
           containerStyle={{}}
           centerAroundCurrentLocation={true}
-         >
+          >
           <Marker
     				name={'Furtwangen center'}
     				position={{lat: 48.0501440, lng: 8.2014190}} 
