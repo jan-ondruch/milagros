@@ -19,6 +19,16 @@ export default class Menu extends Component {
 	}
 }
 
+Menu.propTypes = {
+  title: React.PropTypes.string,
+  subtitle: React.PropTypes.string,
+  menuItems: React.PropTypes.oneOfType([
+    React.PropTypes.string,
+    React.PropTypes.array,
+  ]),
+  data: React.PropTypes.array
+}
+
 /**
  * Sets title and subtitle for the menu.
  */
