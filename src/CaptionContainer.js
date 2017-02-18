@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Highlight from 'react-highlighter';
 
-
+/**
+ * Container for the caption part.
+ */
 export default class CaptionContainer extends Component {
 	constructor(props) {
     super(props);
@@ -30,7 +32,9 @@ export default class CaptionContainer extends Component {
   }
 }
 
-
+/**
+ * SearchBar to find substrings in the captions.
+ */
 class SearchBar extends Component {
   constructor(props) {
     super(props);
@@ -58,7 +62,9 @@ class SearchBar extends Component {
   }
 }
 
-
+/**
+ * Filtering of capition texts.
+ */
 class CaptionsGrid extends React.Component {
   render() {
     var rows = [];
@@ -78,11 +84,13 @@ class CaptionsGrid extends React.Component {
   }
 }
 
-
+/**
+ * Display filtered texts and highlight the searched string.
+ */
 let Caption = (props) => (
   <div>
   	<br></br>
-  		<Highlight search={props.search}>{props.caption}</Highlight>
+  		<Highlight caseSensitive={false} matchStyle={{'color': 'red'}} search={props.search}>{props.caption}</Highlight>
   	<br></br>
   </div>
 )

@@ -65,7 +65,7 @@ class ImageTileContainer extends Component {
 				<div className="darken" onMouseOver={this.mouseOver} onMouseOut={this.mouseOut}>
 					<img alt={this.props.alt} src={this.props.src}></img>
 					<span>
-						{this.props.likes}
+						{this.props.likes} likes
 					</span>
 					<div>
 						{this.props.tags.map((x) => <p key={x}>{x}</p>)}
