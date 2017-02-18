@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ChartContainer from './ChartContainer';
 import ImagesContainer from './ImagesContainer';
-import MapContainer from './MapContainer';
+import CaptionContainer from './CaptionContainer';
 
 
 /**
@@ -47,9 +47,12 @@ class MenuBody extends Component {
 
 	render() {
 		let rows = [];
-		this.props.menuItems.forEach((menuItem) => {
-			rows.push(<MenuRow key={menuItem} value={menuItem} />)
-		})
+		// if there are no options
+		if (!(this.props.menuItems[0] === undefined)) {
+			this.props.menuItems.forEach((menuItem) => {
+				rows.push(<MenuRow key={menuItem} value={menuItem} />)
+			})
+		}
 		// Charts 
 		if (this.props.menuItems[0] === 'filter') {
 			return (
@@ -77,8 +80,8 @@ class MenuBody extends Component {
 			return (
 				<div value={this.state.value} onClick={this.handleClick}>
 					{rows}
-					<MapContainer data={this.props.data} 
-												name={this.state.value}
+					<CaptionContainer data={this.props.data} 
+														name={this.state.value}
 					/>
 				</div>
 			)
