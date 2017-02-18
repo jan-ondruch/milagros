@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import Menu from './Menu';
+import React, { Component } from 'react'
+import Menu from './Menu'
 
 
-let MENUITEMS_CHART = ["filter", "likes", "comments"];
-let MENUITEMS_POSTS = ["images", "videos"];
+let MENUITEMS_CHART = ["filter", "likes", "comments"]
+let MENUITEMS_POSTS = ["images", "videos"]
 
 /**
  * 
@@ -14,8 +14,8 @@ export default class InstaApi extends Component {
 	 * The constructor for a React component is called before it is mounted.
 	 */
 	constructor() {
-		super();
-		this.state = {data: {}};
+		super()
+		this.state = {data: {}}
 	}
 
 	/**
@@ -32,7 +32,7 @@ export default class InstaApi extends Component {
  		 * We call .window because that the context the function has.
  		 */
 		window.instaFeed = (result) => {
-			this.setState({data: result.data});
+			this.setState({data: result.data})
 		}
 
 		// JSONP is a trick to overcome XMLHttpRequest same domain policy.
@@ -40,9 +40,9 @@ export default class InstaApi extends Component {
 		// it will call it, pass the data and voila!
 		// That's all there is to know about JSONP: it's a callback and script tags.
 		// http://stackoverflow.com/questions/5943630/basic-example-of-using-ajax-with-jsonp. 
-		let script = document.createElement('script');
-		script.setAttribute('src', 'https://api.instagram.com/v1/tags/workhardplayhard/media/recent?access_token=2157874055.efad13a.41abd3f6d9414a39b34e7e48f201e732&callback=instaFeed');
-		document.head.appendChild(script);
+		let script = document.createElement('script')
+		script.setAttribute('src', 'https://api.instagram.com/v1/tags/workhardplayhard/media/recent?access_token=2157874055.efad13a.41abd3f6d9414a39b34e7e48f201e732&callback=instaFeed')
+		document.head.appendChild(script)
 	}
 
 	/**
@@ -58,7 +58,7 @@ export default class InstaApi extends Component {
   	if (!Object.keys(this.state.data).length) {
   		return (
   			<p>Loading data...</p>
-  		);
+  		)
   	} 
   	else {
   		return (
@@ -79,7 +79,7 @@ export default class InstaApi extends Component {
                 menuItems={''}
           />
       	</div>
-    	);
+    	)
   	} 
   }
 }

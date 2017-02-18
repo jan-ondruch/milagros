@@ -18,7 +18,7 @@ export default class HeaderTextCarousel extends Component {
       	tech: techs[i] 	
       })
       i++
-      if (i >= techs.length) i = 0;
+      if (i >= techs.length) i = 0
     }, 3000)
 	}
 
@@ -27,6 +27,6 @@ export default class HeaderTextCarousel extends Component {
 			<div>
 				<h3>Webapp created with: {this.state.tech}</h3>
 			</div>
-		);
+		)
 	}
 }

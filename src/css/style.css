@@ -4,6 +4,15 @@ body {
   font-family: sans-serif;
 }
 
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #ffc107;
+  padding: 20px;
+  color: #3d3d3d;
+}
 
 /* images and videos grid */
 

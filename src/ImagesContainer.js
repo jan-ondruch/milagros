@@ -1,6 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 
+/**
+ * Container for the images part.
+ */
 export default class ImagesContainer extends Component {
 	render() {
 		// images
@@ -18,14 +21,14 @@ export default class ImagesContainer extends Component {
 				    // A good rule of thumb is that elements inside the map() call need keys.
 				  ))}
 				</div>
-			);
+			)
 		}
 		// videos
 		else if (this.props.name === 'videos') {
 			let videos = this.props.data.filter((x) => {
-				return x.type === 'video';
-			});
-			let videoTiles = [];
+				return x.type === 'video'
+			})
+			let videoTiles = []
 				videos.forEach((x) => {
 				videoTiles.push(<VideoTile key={x.id} src={x.videos.standard_resolution.url} />)
 			})
@@ -33,7 +36,7 @@ export default class ImagesContainer extends Component {
 				<div id="postsGrid">
 					{videoTiles}
 				</div>
-			);
+			)
 		}
 	}
 }
@@ -44,22 +47,22 @@ export default class ImagesContainer extends Component {
  */
 class ImageTileContainer extends Component {	
 	constructor(props) {
-		super(props);
+		super(props)
 		this.state = {hover: false}
-		this.mouseOver = this.mouseOver.bind(this);
-		this.mouseOut = this.mouseOut.bind(this);
+		this.mouseOver = this.mouseOver.bind(this)
+		this.mouseOut = this.mouseOut.bind(this)
 	}
 
 	mouseOver() {
-		this.setState({hover: true});
+		this.setState({hover: true})
 	}
 
 	mouseOut() {
-		this.setState({hover: false});
+		this.setState({hover: false})
 	}
 
 	render() {
-		// render default image look and image with info onHover
+		// Render default image look and image with info onHover.
 		if (this.state.hover) {
 			return (
 				<div className="darken" onMouseOver={this.mouseOver} onMouseOut={this.mouseOut}>
@@ -74,7 +77,7 @@ class ImageTileContainer extends Component {
 			)
 		}
 		else {
-			// empty elements must be there for non-glitching onHover
+			// Empty elements must be there for non-glitching onHover.
 			return (
 				<div className="lighten" onMouseOver={this.mouseOver} onMouseOut={this.mouseOut}>
 					<img alt={this.props.alt} src={this.props.src}></img>

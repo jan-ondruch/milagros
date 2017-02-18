@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
-import ChartContainer from './ChartContainer';
-import ImagesContainer from './ImagesContainer';
-import CaptionContainer from './CaptionContainer';
+import React, { Component } from 'react'
+import ChartContainer from './ChartContainer'
+import ImagesContainer from './ImagesContainer'
+import CaptionContainer from './CaptionContainer'
 
 
 /**
  * Reusable menu component.
+ * Components: MenuHeader, MenuBody -> MenuRow.
  */
 export default class Menu extends Component {
 	render() {
@@ -14,7 +15,7 @@ export default class Menu extends Component {
 				<MenuHeader title={this.props.title} subtitle={this.props.subtitle} />
 				<MenuBody menuItems={this.props.menuItems} data={this.props.data} />
 			</div>
-		);
+		)
 	}
 }
 
@@ -36,9 +37,9 @@ let MenuHeader = (props) => (
  */
 class MenuBody extends Component {
 	constructor(props) {
-		super(props);
-		this.state = {value: this.props.menuItems[0]};	// chosen option to draw chart
-		this.handleClick = this.handleClick.bind(this);
+		super(props)
+		this.state = {value: this.props.menuItems[0]}	// chosen option to draw chart
+		this.handleClick = this.handleClick.bind(this)
 	}
 
 	handleClick(e) {
@@ -46,7 +47,7 @@ class MenuBody extends Component {
 	}
 
 	render() {
-		let rows = [];
+		let rows = []
 		// if there are no options
 		if (!(this.props.menuItems[0] === undefined)) {
 			this.props.menuItems.forEach((menuItem) => {
