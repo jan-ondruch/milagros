@@ -88,6 +88,7 @@ a:hover {
   color: #333;
   padding-top: 20px;
   padding-bottom: 30px;
+  padding: 0 24px;
 }
 
 .menu-items {
@@ -97,6 +98,7 @@ a:hover {
 .menu-items button {
   color: #0090c9;
   margin-bottom: 30px;
+  margin-right: 6px;
 }
 
 .menu-items button:hover {
@@ -185,6 +187,7 @@ a:hover {
 }
 
 .darken p {
+  line-height: 0;
 	color: #ffffff;
 	font-size: 1.5em;
 }

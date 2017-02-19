@@ -96,7 +96,7 @@ class ImageTileContainer extends Component {
  */
 let VideoTile = (props) => (	
 	<div className="video">
-		<video width="300" height="300" controls>
+		<video width="100%" height="100%" controls>
   		<source src={props.src} type="video/mp4"></source>
   	</video>
 	</div>
