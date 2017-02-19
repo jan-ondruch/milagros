@@ -1,3 +1,4 @@
+import Footer from './Footer'
 import Header from './Header'
 import Info from './Info'
 import InstaApi from './InstaApi'
@@ -12,6 +13,7 @@ export default class App extends Component {
         <Header />
         <Info />
         <InstaApi />
+        <Footer />
       </div>
     )
   }

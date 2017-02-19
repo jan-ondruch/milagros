@@ -49,7 +49,7 @@ class SearchBar extends Component {
   
   render() {
     return (
-      <form>
+      <form className="search-bar">
         <input
           type="text"
           placeholder="Search... (e.g. 'love')"
@@ -86,9 +86,9 @@ class CaptionsGrid extends React.Component {
  * Display filtered texts and highlight the searched string.
  */
 let Caption = (props) => (
-  <div>
+  <div className="caption">
   	<br></br>
-  		<Highlight caseSensitive={false} matchStyle={{'color': 'red'}} search={props.search}>{props.caption}</Highlight>
+  		<Highlight caseSensitive={false} matchStyle={{'color': '#0090c9'}} search={props.search}>{props.caption}</Highlight>
   	<br></br>
   </div>
 )

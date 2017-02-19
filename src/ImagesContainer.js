@@ -33,7 +33,7 @@ export default class ImagesContainer extends Component {
 				videoTiles.push(<VideoTile key={x.id} src={x.videos.standard_resolution.url} />)
 			})
 			return (
-				<div id="postsGrid">
+				<div id="postsGrid" className="video-tiles">
 					{videoTiles}
 				</div>
 			)
@@ -95,8 +95,8 @@ class ImageTileContainer extends Component {
  * Render elements on the screen
  */
 let VideoTile = (props) => (	
-	<div>
-		<video style={{backgroundColor: 'black'}} width="300" height="300" controls>
+	<div className="video">
+		<video width="300" height="300" controls>
   		<source src={props.src} type="video/mp4"></source>
   	</video>
 	</div>
