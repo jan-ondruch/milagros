@@ -11,7 +11,7 @@ import CaptionContainer from './CaptionContainer'
 export default class Menu extends Component {
 	render() {
 		return (
-			<div>
+			<div className="menu">
 				<MenuHeader title={this.props.title} subtitle={this.props.subtitle} />
 				<MenuBody menuItems={this.props.menuItems} data={this.props.data} />
 			</div>
@@ -33,7 +33,7 @@ Menu.propTypes = {
  * Sets title and subtitle for the menu.
  */
 let MenuHeader = (props) => (
-	<div>
+	<div className="menu-header">
 		<h2>{props.title}</h2>
 		<h3>{props.subtitle}</h3>
 	</div>
@@ -67,7 +67,7 @@ class MenuBody extends Component {
 		// Charts 
 		if (this.props.menuItems[0] === 'filter') {
 			return (
-				<div value={this.state.value} onClick={this.handleClick}>
+				<div className="menu-items" value={this.state.value} onClick={this.handleClick}>
 					{rows}
 					<ChartContainer data={this.props.data} 
 													name={this.state.value}
@@ -78,7 +78,7 @@ class MenuBody extends Component {
 		// Images
 		else if (this.props.menuItems[0] === 'images') {
 			return (
-				<div value={this.state.value} onClick={this.handleClick}>
+				<div className="menu-items" value={this.state.value} onClick={this.handleClick}>
 					{rows}
 					<ImagesContainer data={this.props.data} 
 													 name={this.state.value}
@@ -89,7 +89,7 @@ class MenuBody extends Component {
 		// Map
 		else {
 			return (
-				<div value={this.state.value} onClick={this.handleClick}>
+				<div className="menu-items" value={this.state.value} onClick={this.handleClick}>
 					{rows}
 					<CaptionContainer data={this.props.data} 
 														name={this.state.value}

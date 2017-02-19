@@ -1,10 +1,18 @@
 import React, { Component } from 'react'
 
 
-/**
- * Changes header text every 3 seconds.
- */
-export default class HeaderTextCarousel extends Component {
+export default class Header extends Component {
+	render() {
+		return (
+			<div className="header">
+				<h1>Milagros</h1>
+        <HeaderTextCarousel />
+			</div>
+		)
+	}
+}
+
+class HeaderTextCarousel extends Component {
 	constructor() {
 		super()
 		this.state = {tech: 'ReactJS'}
@@ -24,8 +32,9 @@ export default class HeaderTextCarousel extends Component {
 
 	render() {
 		return (
-			<div>
-				<h3>Webapp created with: {this.state.tech}</h3>
+			<div className="header-text-carousel">
+				<h4>Webapp created with</h4>
+				<h3>{this.state.tech}</h3>
 			</div>
 		)
 	}
