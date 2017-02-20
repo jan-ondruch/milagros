@@ -57,15 +57,17 @@ export default class ChartContainer extends React.Component {
       legend: 'none'
     }
     return (
-      <Chart
-        chartType="BarChart"
-        data={filterData}
-        options={options}
-        graph_id="BarChart"
-        width="100%"
-        height="400px"
-        legend_toggle
-       />
+      <div className="chart-wrapper">
+        <Chart
+          chartType="BarChart"
+          data={filterData}
+          options={options}
+          graph_id="BarChart"
+          width="100%"
+          height="400px"
+          legend_toggle
+         />
+       </div>
     )
   }
 }

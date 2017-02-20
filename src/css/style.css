@@ -417,6 +417,11 @@ input[type=text] {
 }
 
 @media (min-width: 1200px) {
+  .chart-wrapper {
+    background-color: #fff;
+    padding: 0 8%;
+  }
+
   .image-tiles {
     padding-bottom: 61px;
   }
@@ -443,5 +448,16 @@ input[type=text] {
 
   .footer p {
     padding-top: 44px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .chart-wrapper {
+    background-color: #fff;
+    padding: 0 12.5%;
+  }
+
+  .darken span {
+    font-size: 5em;
   }
 }
