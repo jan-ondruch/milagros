@@ -26,7 +26,9 @@ button::-moz-focus-inner {
 :focus {outline:none;}
 
 
+/*////////////////*/
 /*//// HEADER ////*/
+/*////////////////*/
 
 .header {
   color: #fff;
@@ -63,7 +65,9 @@ button::-moz-focus-inner {
 }
 
 
+/*///////////////////////////////*/
 /*//// INSTAGRAM API LOADING ////*/
+/*///////////////////////////////*/
 
 .loading {
   text-align: center;
@@ -177,7 +181,10 @@ button::-moz-focus-inner {
   cursor: pointer;
 }
 
+
+/*////////////////////////////////*/
 /*//// IMAGES AND VIDEOS GRID ////*/
+/*////////////////////////////////*/
 
 #postsGrid {
    /* Prevent vertical gaps */
@@ -192,7 +199,7 @@ button::-moz-focus-inner {
 }
 
 #postsGrid img {
-  /* Just in case there are inline attributes */
+  /* Just in case there are in-line attributes */
   width: 100% !important;
   height: auto !important;
 }
@@ -292,7 +299,9 @@ button::-moz-focus-inner {
 }
 
 
+/*//////////////////*/
 /*//// CAPTIONS ////*/
+/*//////////////////*/
 
 .search-bar {
   margin-bottom: 30px;
@@ -302,6 +311,7 @@ input[type=text] {
   border-radius: 0;
   border: 1px solid #555;
   padding: 4px 8px;
+  padding-bottom: 3px;
 }
 
 .no-results-found {
@@ -309,7 +319,9 @@ input[type=text] {
 }
 
 
-/*//// FOOTER ////*/
+/*///////////////////*/
+/*//// FOOTER ///////*/
+/*///////////////////*/
 
 .footer {
   margin-top: 30px;
@@ -331,4 +343,36 @@ input[type=text] {
   bottom: 10px;
   left: 50%;
   transform: translate(-50%, 0);
+}
+
+
+/*///////////////////*/
+/*//// MEDIA CSS ////*/
+/*///////////////////*/
+
+@media (min-width: 400px) {
+  .image-tiles {
+    background-color: #fff;
+    padding-bottom: 82px;
+  }
+
+  .darken span {
+    font-size: 3em;
+  }
+
+  .video-tiles {
+    background-color: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .video {
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 600px) {
+  .darken span {
+    font-size: 4em;
+  }
 }

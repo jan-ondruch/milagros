@@ -69,6 +69,7 @@ class MenuBody extends Component {
 		// If there are no options.
 		if (!(this.props.menuItems[0] === undefined)) {
 			this.props.menuItems.forEach((menuItem) => {
+				// Focus on button class toggle.
 				if (menuItem === this.state.value) {
 					rows.push(<MenuRow class="button-active" key={menuItem} value={menuItem} />)	
 				}

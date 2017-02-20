@@ -9,7 +9,7 @@ export default class ImagesContainer extends Component {
 		// images
 		if (this.props.name === 'images') {
 			return (
-				<div id="postsGrid">
+				<div className="image-tiles" id="postsGrid">
 					{this.props.data.map((x) => (
 				    <ImageTileContainer alt={x.caption.text} 
 				    					 					src={x.images.standard_resolution.url}
