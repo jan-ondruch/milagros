@@ -289,8 +289,7 @@ h1 {
 
 .caption {
   background-color: #fff;
-  padding: 12px 24px;
-  padding-bottom: 32px;
+  padding: 20px 24px;
 }
 
 .caption:nth-child(2n) {
@@ -400,7 +399,7 @@ input[type=text] {
   }
 
   .caption {
-    padding: 12px 16.5%;
+    padding: 32px 16.5%;
   }
 
   .footer p {

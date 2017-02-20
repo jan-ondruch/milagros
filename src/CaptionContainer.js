@@ -98,8 +98,6 @@ class CaptionsGrid extends React.Component {
  */
 let Caption = (props) => (
   <div className="caption">
-  	<br></br>
-  		<Highlight caseSensitive={false} matchStyle={{'color': '#0090c9'}} search={props.search}>{props.caption}</Highlight>
-  	<br></br>
+  	<Highlight caseSensitive={false} matchStyle={{'color': '#0090c9'}} search={props.search}>{props.caption}</Highlight>
   </div>
 )
