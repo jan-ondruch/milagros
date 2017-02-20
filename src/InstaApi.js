@@ -57,7 +57,9 @@ export default class InstaApi extends Component {
   	// Check if object is empty - conditional rendering
   	if (!Object.keys(this.state.data).length) {
   		return (
-  			<p>Loading data...</p>
+        <div className="loading">
+  			 <p>Loading data...</p>
+        </div>
   		)
   	} 
   	else {

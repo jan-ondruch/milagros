@@ -62,6 +62,10 @@ button::-moz-focus-inner {
   padding-top: 6px;
 }
 
+.loading {
+  text-align: center;
+}
+
 
 /*//// INFO ////*/
 
@@ -117,6 +121,7 @@ button::-moz-focus-inner {
 
 /* hover must go first otherwise it overwrites the focus */
 .menu-items button:hover {
+  cursor: pointer;
   color: #007db3;
   background-color: #fff;
 }

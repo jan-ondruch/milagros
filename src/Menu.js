@@ -111,5 +111,5 @@ class MenuBody extends Component {
  * Creates a button in the menu.
  */
 let MenuRow = (props) => (
-	<button id={props.value} value={props.value}>{props.value}</button>
+	<button value={props.value}>{props.value}</button>
 )

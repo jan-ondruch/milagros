@@ -52,7 +52,7 @@ class SearchBar extends Component {
       <form className="search-bar">
         <input
           type="text"
-          placeholder="Search... (e.g. 'love')"
+          placeholder="Search... (e.g. 'thanks')"
           value={this.props.filterText}
           ref={(input) => this.filterTextInput = input}
           onChange={this.handleChange}

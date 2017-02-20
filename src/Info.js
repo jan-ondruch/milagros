@@ -4,9 +4,9 @@ export default class Info extends Component {
 	render() {
 		return (
 			<div className="info">
-				<h2>App info</h2>
+				<h2>What is this?</h2>
 				<p>
-					Jelly-o halvah marshmallow soufflé ice cream lollipop gummi bears apple pie powder. Bonbon oat cake toffee lollipop biscuit pie liquorice liquorice. Sesame snaps oat cake biscuit chocolate cake oat cake. Dragée bear claw gummi bears chocolate sweet tart carrot cake bonbon.
+					Milagros is a simple web application using Instagram API to download my Instagram posts and display that data in charts, pictures, videos or captions! 
 				</p>
 			</div>
 		)
