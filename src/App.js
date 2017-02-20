@@ -2,7 +2,6 @@ import Footer from './Footer'
 import Header from './Header'
 import Info from './Info'
 import InstaApi from './InstaApi'
-import Navbar from './Navbar'
 import React, { Component } from 'react'
 
 

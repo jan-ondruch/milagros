@@ -56,12 +56,7 @@ class MenuBody extends Component {
 
 	handleClick(e) {
 		// Prevent clicks out of buttons and change of the active button.
-		if (e.target.value === undefined) {
-			console.log(this.state.value);
-		}
-		else {
-			this.setState({value: e.target.value})
-		}
+		e.target.value === undefined ? null : this.setState({value: e.target.value})
 	}
 
 	render() {

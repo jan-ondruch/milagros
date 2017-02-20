@@ -5,7 +5,7 @@ export default class Header extends Component {
 	render() {
 		return (
 			<div className="header">
-				<h1>Milagros</h1>
+				<h1>MILAGROS</h1>
         <HeaderTextCarousel />
 			</div>
 		)
@@ -19,7 +19,7 @@ class HeaderTextCarousel extends Component {
 	}
 
 	componentDidMount() {
-		let techs = ['ReactJS', 'Instagram API', 'Heroku']
+		let techs = ['ReactJS', 'CSS3', 'Instagram API', 'Heroku']
 		let i = 0
 		setInterval( () => { 
       this.setState({

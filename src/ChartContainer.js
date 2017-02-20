@@ -2,6 +2,22 @@ import React from 'react'
 import {Chart} from 'react-google-charts'
 
 
+// Chart axis and title descriptions.
+var chartDesc = {
+  filter: {
+    title: 'Usage of filters in posts.',
+    y: 'filter name', 
+  },
+  likes: {
+    title: 'Number of likes per post.',
+    y: 'post',
+  },
+  comments: {
+    title: 'Number of comments per post.',
+    y: 'post',
+  }
+}
+
 /**
  * Container (logic) for bar chart.
  */
@@ -10,6 +26,7 @@ export default class ChartContainer extends React.Component {
     super(props)
     this.getData = this.getData.bind(this)
     this.findMaxValue = this.findMaxValue.bind(this)
+    this.setOptions = this.setOptions.bind(this)
   }
 
   /**
@@ -47,15 +64,36 @@ export default class ChartContainer extends React.Component {
     return maxValue <= 5 ? maxValue = 6 : maxValue
   }
 
-  render() {
-    let filterData = this.getData()
+  /**
+   * Sets options for the chart.
+   */
+  setOptions(filterData) {
     let maxValue = this.findMaxValue(filterData)
     let options = {
-      title: this.props.name,
+      title: 'title',
       hAxis: {title: 'count', minValue: 0, maxValue: maxValue},
-      vAxis: {title: this.props.name, minValue: 0, maxValue: 0},
+      vAxis: {title: 'title', minValue: 0, maxValue: 0},
       legend: 'none'
     }
+    // Chart description data.
+    if (this.props.name === 'filter') {
+      options.title = chartDesc.filter.title
+      options.vAxis.title = chartDesc.filter.y
+    }
+    else if (this.props.name === 'likes') {
+      options.title = chartDesc.likes.title
+      options.vAxis.title = chartDesc.likes.y
+    }
+    else {
+      options.title = chartDesc.comments.title
+      options.vAxis.title = chartDesc.comments.y
+    }
+    return options
+  }
+
+  render() {
+    let filterData = this.getData()
+    let options = this.setOptions(filterData)
     return (
       <div className="chart-wrapper">
         <Chart
