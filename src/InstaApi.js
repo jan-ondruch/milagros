@@ -58,7 +58,12 @@ export default class InstaApi extends Component {
   	if (!Object.keys(this.state.data).length) {
   		return (
         <div className="loading">
-  			 <p>Loading data...</p>
+  			 <p>Loading data</p>
+         <div className="spinner">
+          <div className="bounce1"></div>
+          <div className="bounce2"></div>
+          <div className="bounce3"></div>
+        </div>
         </div>
   		)
   	} 
