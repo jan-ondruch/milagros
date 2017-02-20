@@ -62,6 +62,9 @@ button::-moz-focus-inner {
   padding-top: 6px;
 }
 
+
+/*//// INSTAGRAM API LOADING ////*/
+
 .loading {
   text-align: center;
 }
@@ -151,24 +154,28 @@ button::-moz-focus-inner {
 
 .menu-items button {
   border-radius: 0px;
-  color: #fff;
   margin-bottom: 30px;
   margin-right: 6px;
   padding: 4px 8px;
   border: 1px solid #007db3;
-  background-color: #007db3;
   box-shadow: 0;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }
 
-/* hover must go first otherwise it overwrites the focus */
-.menu-items button:hover {
-  cursor: pointer;
+.menu-items .button-inactive {
   color: #007db3;
   background-color: #fff;
 }
 
+.menu-items .button-active {
+  color: #fff;
+  background-color: #007db3;
+}
+
+.menu-items button:hover {
+  cursor: pointer;
+}
 
 /*//// IMAGES AND VIDEOS GRID ////*/
 
@@ -218,7 +225,6 @@ button::-moz-focus-inner {
   column-count:         1;
   }
 }
-
 
 /* onHover image */
 
@@ -285,11 +291,25 @@ button::-moz-focus-inner {
   color: #f2f2f2;
 }
 
+
 /*//// CAPTIONS ////*/
 
 .search-bar {
   margin-bottom: 30px;
 }
+
+input[type=text] {
+  border-radius: 0;
+  border: 1px solid #555;
+  padding: 4px 8px;
+}
+
+.no-results-found {
+  padding-bottom: 10px;
+}
+
+
+/*//// FOOTER ////*/
 
 .footer {
   margin-top: 30px;

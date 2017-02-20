@@ -48,12 +48,14 @@ let MenuHeader = (props) => (
 class MenuBody extends Component {
 	constructor(props) {
 		super(props)
-		this.state = {value: this.props.menuItems[0]}	// chosen option to draw chart
+		this.state = {
+			value: this.props.menuItems[0],
+			}	// Chosen option to draw chart.
 		this.handleClick = this.handleClick.bind(this)
 	}
 
 	handleClick(e) {
-		// prevent clicks out of buttons and change of the active button
+		// Prevent clicks out of buttons and change of the active button.
 		if (e.target.value === undefined) {
 			console.log(this.state.value);
 		}
@@ -64,10 +66,15 @@ class MenuBody extends Component {
 
 	render() {
 		let rows = []
-		// if there are no options
+		// If there are no options.
 		if (!(this.props.menuItems[0] === undefined)) {
 			this.props.menuItems.forEach((menuItem) => {
-				rows.push(<MenuRow key={menuItem} value={menuItem} />)
+				if (menuItem === this.state.value) {
+					rows.push(<MenuRow class="button-active" key={menuItem} value={menuItem} />)	
+				}
+				else {
+					rows.push(<MenuRow class="button-inactive" key={menuItem} value={menuItem} />)
+				}
 			})
 		}
 		// Charts 
@@ -86,7 +93,7 @@ class MenuBody extends Component {
 			return (
 				<div className="menu-items" value={this.state.value} onClick={this.handleClick}>
 					{rows}
-					<ImagesContainer data={this.props.data} 
+					<ImagesContainer data={this.props.data}
 													 name={this.state.value}
 					/>
 				</div>
@@ -111,5 +118,5 @@ class MenuBody extends Component {
  * Creates a button in the menu.
  */
 let MenuRow = (props) => (
-	<button value={props.value}>{props.value}</button>
+	<button className={props.class} value={props.value}>{props.value}</button>
 )

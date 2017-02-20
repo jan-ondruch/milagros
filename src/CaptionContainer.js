@@ -52,7 +52,7 @@ class SearchBar extends Component {
       <form className="search-bar">
         <input
           type="text"
-          placeholder="Search... (e.g. 'thanks')"
+          placeholder="Search... (e.g. 'Thanks')"
           value={this.props.filterText}
           ref={(input) => this.filterTextInput = input}
           onChange={this.handleChange}
@@ -69,16 +69,27 @@ class CaptionsGrid extends React.Component {
   render() {
     var rows = []
     this.props.data.forEach((x) => {
-    	// if the searched is not in the caption
+    	// If the searched is not in the caption.
       if (x.caption.text.indexOf(this.props.filterText) === -1) return
       rows.push(<Caption search={this.props.filterText} caption={x.caption.text} key={x.id} />)
     })
 
-    return (
-			<div>
-				{rows}
-			</div>
-    )
+    // If matching results are found, return them, otherwise output a message.
+    if (rows.length > 0) {
+      return (
+        <div>
+          {rows}
+        </div>
+      )  
+    }
+    else {
+      return (
+        <div className="no-results-found">
+          <p>No results found.</p>
+        </div>
+      )
+    }
+    
   }
 }
 
