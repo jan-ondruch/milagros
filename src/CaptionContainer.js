@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
 import Highlight from 'react-highlighter'
+import React, { Component } from 'react'
 
 
 /**

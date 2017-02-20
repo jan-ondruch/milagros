@@ -92,7 +92,7 @@ class ImageTileContainer extends Component {
 }
 
 /**
- * Render elements on the screen
+ * Render elements on the screen.
  */
 let VideoTile = (props) => (	
 	<div className="video">

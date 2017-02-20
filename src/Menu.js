@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import CaptionContainer from './CaptionContainer'
 import ChartContainer from './ChartContainer'
 import ImagesContainer from './ImagesContainer'
-import CaptionContainer from './CaptionContainer'
+import React, { Component } from 'react'
 
 
 /**

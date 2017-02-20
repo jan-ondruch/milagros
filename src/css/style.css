@@ -32,12 +32,6 @@ button::-moz-focus-inner {
 
 .header {
   color: #fff;
-  /*background-image: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url('../images/header_1920_1200.jpg');*/
   background-color: #161616;
   vertical-align: top;
   text-align: center;

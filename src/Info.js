@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 
+
+/**
+ * Info part about the app.
+ */
 export default class Info extends Component {
 	render() {
 		return (

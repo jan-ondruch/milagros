@@ -1,18 +1,16 @@
-import React, { Component } from 'react'
 import Menu from './Menu'
+import React, { Component } from 'react'
 
 
 let MENUITEMS_CHART = ["filter", "likes", "comments"]
 let MENUITEMS_POSTS = ["images", "videos"]
 
 /**
- * 
- * We can omit here React.Component since we already imported Component.
+ * Instagram API for getting the Instagram data.
+ * Uses my personal token and downloads only posts with the #workhardplayhard tag.
+ * This is because of the Instragram policy for developers.
  */
 export default class InstaApi extends Component {
-	/**
-	 * The constructor for a React component is called before it is mounted.
-	 */
 	constructor() {
 		super()
 		this.state = {data: {}}

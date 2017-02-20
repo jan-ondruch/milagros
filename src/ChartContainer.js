@@ -1,5 +1,5 @@
+import { Chart } from 'react-google-charts'
 import React from 'react'
-import {Chart} from 'react-google-charts'
 
 
 // Chart axis and title descriptions.
@@ -88,6 +88,7 @@ export default class ChartContainer extends React.Component {
       options.title = chartDesc.comments.title
       options.vAxis.title = chartDesc.comments.y
     }
+
     return options
   }
 
