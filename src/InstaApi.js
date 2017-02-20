@@ -74,7 +74,7 @@ export default class InstaApi extends Component {
       					menuItems={MENUITEMS_POSTS}
       		/>
           <Menu title="3. Capitions"
-                subtitle="Search for words I used!"
+                subtitle="Search for specific words I used in my posts!"
                 data={this.state.data}
                 menuItems={''}
           />

@@ -19,6 +19,13 @@ a:hover {
   color: #007db3;
 }
 
+button::-moz-focus-inner {
+  border: 0;
+}
+
+:focus {outline:none;}
+
+
 /*//// HEADER ////*/
 
 .header {
@@ -86,9 +93,9 @@ a:hover {
 
 .menu-header h3 {
   color: #333;
+  padding: 0 24px;
   padding-top: 20px;
   padding-bottom: 30px;
-  padding: 0 24px;
 }
 
 .menu-items {
@@ -96,13 +103,22 @@ a:hover {
 }
 
 .menu-items button {
-  color: #0090c9;
+  border-radius: 0px;
+  color: #fff;
   margin-bottom: 30px;
   margin-right: 6px;
+  padding: 4px 8px;
+  border: 1px solid #007db3;
+  background-color: #007db3;
+  box-shadow: 0;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
 }
 
+/* hover must go first otherwise it overwrites the focus */
 .menu-items button:hover {
   color: #007db3;
+  background-color: #fff;
 }
 
 
@@ -159,15 +175,15 @@ a:hover {
 /* onHover image */
 
 .darken {
-	color: white;
+	color: #fff;
 	position: relative;
-    display: inline-block;
-    padding: 0;
-    cursor: default;
+  display: inline-block;
+  padding: 0;
+  cursor: default;
 }
 
 .darken:hover img {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .darken span {
@@ -187,9 +203,9 @@ a:hover {
 }
 
 .darken p {
-  line-height: 0;
+  line-height: 0.1;
 	color: #ffffff;
-	font-size: 1.5em;
+	font-size: 1.2em;
 }
 
 .lighten {
@@ -202,10 +218,13 @@ a:hover {
 
 .video-tiles {
   background-color: #fff;
-  padding: 30px 0;
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 
-:focus {outline:none;}
+.video {
+  margin-top: 20px;
+}
 
 .caption {
   background-color: #fff;
@@ -228,13 +247,14 @@ a:hover {
   margin-top: 30px;
   background-color: #f2f2f2;
   position: relative;
-  height: 180px;
+  height: 160px;
   text-align: center;
+  padding: 0 24px;
 }
 
 .footer p {
-  font-size: 1.2em;
-  padding-top: 30px;
+  font-size: 1em;
+  padding-top: 40px;
 }
 
 .footer span {

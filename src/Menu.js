@@ -53,7 +53,13 @@ class MenuBody extends Component {
 	}
 
 	handleClick(e) {
-		this.setState({value: e.target.value})
+		// prevent clicks out of buttons and change of the active button
+		if (e.target.value === undefined) {
+			console.log(this.state.value);
+		}
+		else {
+			this.setState({value: e.target.value})
+		}
 	}
 
 	render() {
@@ -86,7 +92,7 @@ class MenuBody extends Component {
 				</div>
 			)
 		}
-		// Map
+		// Captions
 		else {
 			return (
 				<div className="menu-items" value={this.state.value} onClick={this.handleClick}>
@@ -105,5 +111,5 @@ class MenuBody extends Component {
  * Creates a button in the menu.
  */
 let MenuRow = (props) => (
-	<button value={props.value}>{props.value}</button>
+	<button id={props.value} value={props.value}>{props.value}</button>
 )
