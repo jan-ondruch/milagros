@@ -1,0 +1,36 @@
+Milagros
+Website: https://milagros.herokuapp.com/
+
+Description:
+Milagros is a simple web app presenting some of my personal Instagram data. 
+Main goal of this project was to learn how some social media API works in connection with ReactJS. 
+Great emphasis was placed on UX/UI design. The website is fully responsive. 
+Heroku is used for hosting and the project is based on a Facebook react-app boilerplate. 
+Front-end is mainly built with ReactJS (ES6 syntax) and CSS3.
+
+Design:
+Purpose of the website was more as a challenge and practice for me, rather than a real use project. 
+Because of that, design is really straightforward, basically dividing the app into three sections. 
+Each of the sections works provided me with different challenges – anything from utilizing npm 
+ReactJS packages to CSS3 grid system.
+Responsivity was achieved solely by CSS3 and mobile-first approach. 
+I avoided using any kind of template system or framework to achieve pixel-perfect result. 
+I put a lot of thought into nice-clean UI to cover up the kind of “sandbox” UX.
+Even though this project isn’t for any customer, I played around with the code a lot to 
+make is as efficient as possible:
+
+    All the files are commented and clearly readable.
+    React components are logically separated into different modules.
+    I tried to use stateful and stateless functions (components) exactly as they should be used.
+    I also created a reusable component to make it as DRY as possible.
+
+I learned a lot during this project. Firstly, I improved my thinking in React, 
+how to sketch an app and based on it build components. Next, how to build a reusable
+components that you can use in other projects, too. Other skill was utilizing npm 
+modules from other developers, reading documentation, understanding the module and using it (react-charts).
+Probably the biggest challenge was to integrate the Instagram API. In 2015, Instagram radically 
+restricted use of the API and without certain permissions, it’s no longer possible to use 
+“whatever” data you want to. That’s the reason I use my personal data, to which I can get access. 
+However, it’s still limited (use can fetch only a maximum number of posts) and you have to go through many hurdles.
+Anyway, It’s been a great experience overall, ReactJS is amazing to work with and it makes 
+the programming experience really enjoyable.
