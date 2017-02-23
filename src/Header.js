@@ -33,7 +33,7 @@ class HeaderTextCarousel extends Component {
 	render() {
 		return (
 			<div className="header-text-carousel">
-				<h4>Instagram data based webapp created with</h4>
+				<h4>Instagram data based web app created with</h4>
 				<h3>{this.state.tech}</h3>
 			</div>
 		)
