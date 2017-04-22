@@ -19,9 +19,9 @@ I put a lot of thought into nice-clean UI to cover up the kind of “sandbox” 
 Even though this project isn’t for any customer, I played around with the code a lot to 
 make is as efficient as possible:<br>
 
--All the files are commented and clearly readable.
--React components are logically separated into different modules.
--I tried to use stateful and stateless functions (components) exactly as they should be used.
+-All the files are commented and clearly readable.<br>
+-React components are logically separated into different modules.<br>
+-I tried to use stateful and stateless functions (components) exactly as they should be used.<br>
 -I also created a reusable component to make it as DRY as possible.
 
 ## What I learned
